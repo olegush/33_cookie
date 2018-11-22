@@ -124,8 +124,8 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <!-- TODO вынести шапку в riot tag и добавить логику -->
-          <li role="presentation" class="active"><a href="#/">Мои автомобили</a></li>
-          <li role="presentation"><a href="#/signup">Регистрация</a></li>
+          <li role="presentation" class="active"><a href="">Мои автомобили</a></li>
+          <li role="presentation"><a href="#signup">Регистрация</a></li>
         </ul>
       </nav>
       <h3 class="text-muted">ПомойАвто</h3>
@@ -141,18 +141,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <!-- custom riot tags -->
-  <script type="riot/tag" src="/pages/signup-page.tag.html"></script>
-  <script type="riot/tag" src="/pages/cars-page.tag.html"></script>
+  <script type="riot/tag" src="pages/signup-page.tag.html"></script>
+  <script type="riot/tag" src="pages/cars-page.tag.html"></script>
 
-  <script src="/vendor/navigo.js"></script><!-- router -->
-  <script src="/vendor/fetch.js"></script><!-- uses isomorfic fetch for IE support -->
+  <script src="vendor/navigo.js"></script><!-- router -->
+  <script src="vendor/fetch.js"></script><!-- uses isomorfic fetch for IE support -->
 
   <script type="text/javascript">
     window.getAPIUrl = function(endpoint){
       if (endpoint.startsWith('/'))
         endpoint = endpoint.substring(1)
 
-      // return 'http://localhost:8080/' + endpoint // Uncomment to enable local API gateway
+      //return 'http://localhost:8080/' + endpoint // Uncomment to enable local API gateway
       return 'http://api.33_cookie.devman.org/' + endpoint
     }
   </script>
@@ -172,11 +172,11 @@
 
     router.on({
       // docs live here https://github.com/krasimir/navigo
-      '/signup': function(){
+      'signup': function(){
         riot.mount(mountPoint, 'signup-page', {})
       },
 
-      '/': function(){
+      'cars': function(){
         riot.mount(mountPoint, 'cars-page', {})
       },
     }).resolve();
