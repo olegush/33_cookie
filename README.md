@@ -1,6 +1,14 @@
-# Frontend for SPA «ПомойАвто»
+# Frontend for SPA
 
-It is a frontend for single page application. Reach JavaScript is present.
+It is a frontend for single page application.
+
+Application logic:
+* user signs up with email and password
+* AJAX-request goes to server
+* server registers the user and gives cookies
+* frontend redirects the user to car list
+* frontend requests data from server
+
 
 # Deploy on localhost
 
@@ -8,10 +16,10 @@ Example of frontend launch on Linux, Python 3:
 
 ```bash
 cd static/
-python3 -m http.server
+python3 -m http.server 9000
 ```
 
-Open page [localhost:8000](http://localhost:8000) in browser.
+Open page [localhost:9000](http://localhost:9000) in browser.
 
 
 # Project Goals
