@@ -4,14 +4,14 @@ It is a frontend for single page application. Reach JavaScript is present.
 
 # Deploy on localhost
 
-Example of frontend launch on Linux, Python 3.6:
+Example of frontend launch on Linux, Python 3:
 
 ```bash
 cd static/
-python3 -m http.server --bind 127.0.0.1 9000
+python3 -m http.server
 ```
 
-Open page [127.0.0.1:9000](http://127.0.0.1:9000) in browser.
+Open page [localhost:8000](http://localhost:8000) in browser.
 
 
 # Project Goals
